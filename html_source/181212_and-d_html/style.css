@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/*=======================================
+基本事項
+=========================================*/
+*{
+	-moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   box-sizing: border-box;
+}
+body{
+	width:100%;
+	margin:0;
+	padding:0;
+	height:auto;
+}
+#wrapper{
+	width:100%;
+	max-width:1000px;
+	margin:3% auto;
+	position: relative;
+}
+
+/*=======================================
+メーター
+=========================================*/
+#meter{
+	display: inline-flex;
+	position: absolute;
+	top: 22px;
+	right: 0px;
+}
+#meter p{
+	font-size: 20px;
+	padding: 9px 5px 0px 0;
+}
+#meter .meter_box{
+	width: 270px;
+	height: 40px;
+	border: solid 1px #5781c8;
+	border-radius: 10px;
+}
+#meter .meter{
+	background: #5781c8;
+	width: 10%;
+	height: 100%;
+	border-radius: 8px;
+}
+
+/*=======================================
+質問
+=========================================*/
+#q_title{
+	width:56%;
+}
+.q_title{
+	margin:10px 0;
+	font-size:12px;
+	font-weight:bold;
+	line-height: 1.5;
+}
+.q_ul{
+	width:100%;
+	margin:0 auto;
+	font-size:12px;
+}
+.q_ul li.q_ul_li {
+	background:#c3d7f0;
+	display: flex;
+	align-items: center;
+}
+.q_ul .q_cell{
+	line-height: 1.5;
+	width: 5%;
+	padding:12px 20px;
+}
+.q_ul .q_cell.tx_left{
+	width: 50%;
+	text-align: left;
+}
+.q_ul .q_cell_btn{
+	display: flex;
+	background: #ffffff;
+	width: 45%;
+}
+/*奇数行目の背景色を変更*/
+.q_ul li.q_ul_li:nth-child(even){
+	background: #eaeff7;
+}
+
+/*==================================
+選択肢
+====================================*/
+form{
+	margin:7% auto;
+	text-align:center;
+}
+.q_ul .q_cell_btn{
+	text-align: left;
+	padding: 0 0 0 5px;
+}
+.q_ul .q_cell_btn li label{
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 2px;
+	margin: 5px 0;
+	width: 71px;
+	height: 60px;
+	border-radius: 8px;
+}
+.q_ul .q_cell_btn li:nth-of-type(1) label{
+	background: #5b9bd5;
+	color: #ffffff;
+	border: solid 2px #5b9bd5;
+	padding: 21px 0 0 0;
+}
+.q_ul .q_cell_btn li:nth-of-type(2) label{
+	background: #bdd7ee;
+	border: solid 2px #bdd7ee;
+	padding: 10px 0 0 0;
+}
+.q_ul .q_cell_btn li:nth-of-type(3) label{
+	background: #ffffff;
+	border: solid 2px #9f9f9f;
+  padding: 15px 0 0 0;
+}
+.q_ul .q_cell_btn li:nth-of-type(4) label{
+	background: #fbe5d6;
+	border: solid 2px #fbe5d6;
+    padding: 5px 0 0 0;
+}
+.q_ul .q_cell_btn li:nth-of-type(5) label{
+	background: #f4b183;
+	border: solid 2px #f4b183;
+      padding: 15px 0 0 0;
+}
+.q_ul .q_cell_btn li:nth-of-type(6) label{
+	background: #dfdfdf;
+	border: solid 2px #dfdfdf;
+	padding: 9px 0 0 0;
+}
+.next_btn{
+	margin:5% auto;
+}
+input[type=radio] {
+display: none; /* ラジオボタンを非表示にする */
+}
+form label:hover{
+	cursor: pointer;
+}
+
+/*-------------- チェックされた時 ---------------*/
+.q_ul .q_cell_btn li input[type="radio"]:checked + label {
+	color: #ffffff;
+	background: #548235;
+	border: #548235 solid 2px;
+}
+
+/*==================================
+送信ボタン
+====================================*/
+input[type="submit"]{
+	cursor: pointer;
+	background: #bdd7ee;
+	text-align: center;
+	font-weight: bold;
+	width: 200px;
+	padding: 5px 0;
+	border: none;
+	border-radius: 5px;
+}
+
+/*==================================
+face
+====================================*/
+#face #wrapper {
+	max-width: 700px;
+}
+#face .q_title{
+	margin:10px auto;
+	font-size:12px;
+	font-weight:bold;
+}
+#face .q_ul{
+	margin-bottom: 20px;
+}
+#face .q_cell_btn li {
+	width: 49%;
+}
+#face .q_cell_btn {
+	display: flex;
+	justify-content: space-between;
+}
+#face .q_cell_btn li label {
+	display: block;
+	padding:10px 20px;
+	border: 1px solid #aaaaaa;
+	border-radius:5px;
+	width: 100%;
+	height: auto;
+}
+#face .q_ul li:nth-child(2){
+	width: auto;
+}
+
+/*-------------- チェックされた時 ---------------*/
+#face .q_cell_btn li input[type="radio"]:checked + label {
+	color: #ffffff;
+	background: #548235;
+	border: #548235 solid 1px;
+}
