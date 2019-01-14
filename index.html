@@ -1,7 +1,202 @@
-<html>
-<body>
-<p>
-    This is HTML.
-</p>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>営業組織診断_デモ</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="sp.css" media="screen and (max-width: 1000px)">
+</head>
+
+	<body>
+		<div id="wrapper">
+
+			<div id="meter">
+				<p class="meter_percent">10%</p>
+				<div class="meter_box">
+					<div class="meter"></div>
+				</div>
+			</div>
+
+			<div id="q_title">
+				<p class="q_title">
+					[ 質問2 ]
+				</p>
+				<p class="q_title">
+					あなたが所属している組織についてお伺いします。それぞれの設問について、あてはまる程度をお答えください。（それぞれひとつ）<br><br>
+					注）「～が機能しているか」「～を活用しているか」「～が浸透しているか」という設問については、あなたの組織にそれが無い場合には選択肢の「そもそもそのようなものはない」をお選びください。それはあるが機能していない場合は、「あてはまらない」をお選びください。
+				</p>
+			</div>
+
+			<form>
+
+				<ul class="q_ul">
+					<li class="q_ul_li">
+						<div class="q_cell">Q1</div>
+						<div class="q_cell tx_left">あなたの組織では、営業担当個々の目標設定にあたって、営業管理職と評価基準や内容についてのすり合わせが行われている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q1" value="あてはまる" id="q1-a1"><label for="q1-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q1" value="どちらかと>いえばあてはまる" id="q1-a2"><label for="q1-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q1" value="どちらとも>いえない" id="q1-a3"><label for="q1-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q1" value="どちらかと>いえば>あてはまら>ない" id="q1-a4"><label for="q1-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q1" value="あてはまらない" id="q1-a5"><label for="q1-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q2</div>
+						<div class="q_cell tx_left">あなたの組織では、期中であっても、目標達成のためのすり合わせが営業管理職と部下との間で行われている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q2" value="あてはまる" id="q2-a1"><label for="q2-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q2" value="どちらかといえばあてはまる" id="q2-a2"><label for="q2-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q2" value="どちらともいえない" id="q2-a3"><label for="q2-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q2" value="どちらかといえばあてはまら<br>ない" id="q2-a4"><label for="q2-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q2" value="あてはまらない" id="q2-a5"><label for="q2-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q3</div>
+						<div class="q_cell tx_left">あなたの組織では、各営業担当一人ひとりに目標達成に向けて高い要望が出されている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q3" value="あてはまる" id="q3-a1"><label for="q3-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q3" value="どちらかといえばあてはまる" id="q3-a2"><label for="q3-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q3" value="どちらともいえない" id="q3-a3"><label for="q3-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q3" value="どちらかといえばあてはまら<br>ない" id="q3-a4"><label for="q3-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q3" value="あてはまらない" id="q3-a5"><label for="q3-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q4</div>
+						<div class="q_cell tx_left">あなたの組織では、具体的な仕事の成果やプロセスでの成果によって、営業担当個々の評価が適正に行われている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q4" value="あてはまる" id="q4-a1"><label for="q4-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q4" value="どちらかといえばあてはまる" id="q4-a2"><label for="q4-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q4" value="どちらともいえない" id="q4-a3"><label for="q4-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q4" value="どちらかといえばあてはまら<br>ない" id="q4-a4"><label for="q4-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q4" value="あてはまらない" id="q4-a5"><label for="q4-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q5</div>
+						<div class="q_cell tx_left">あなたの組織では、メンバーのモチベーションを高める場（イベント、コンテスト、表彰等）があり、機能している。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q5" value="あてはまる" id="q5-a1"><label for="q5-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q5" value="どちらかといえばあてはまる" id="q5-a2"><label for="q5-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q5" value="どちらともいえない" id="q5-a3"><label for="q5-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q5" value="どちらかといえばあてはまら<br>ない" id="q5-a4"><label for="q5-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q5" value="あてはまらない" id="q5-a5"><label for="q5-a5" class="label">あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q5" value="そもそもそのようなものはない" id="q5-a6"><label for="q5-a6" class="label">そもそも<br>そのような<br>ものはない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q6</div>
+						<div class="q_cell tx_left">あなたの組織では、実際の仕事を通してメンバーのモチベーションが高まるようなアドバイスや教育が行なわれている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q6" value="あてはまる" id="q6-a1"><label for="q6-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q6" value="どちらかといえばあてはまる" id="q6-a2"><label for="q6-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q6" value="どちらともいえない" id="q6-a3"><label for="q6-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q6" value="どちらかといえばあてはまら<br>ない" id="q6-a4"><label for="q6-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q6" value="あてはまらない" id="q6-a5"><label for="q6-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q7</div>
+						<div class="q_cell tx_left">あなたの組織では、必要なスキル・知識の獲得を支援する仕組みや場があり、活用されている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q7" value="あてはまる" id="q7-a1"><label for="q7-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q7" value="どちらかといえばあてはまる" id="q7-a2"><label for="q7-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q7" value="どちらともいえない" id="q7-a3"><label for="q7-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q7" value="どちらかといえばあてはまら<br>ない" id="q7-a4"><label for="q7-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q7" value="あてはまらない" id="q7-a5"><label for="q7-a5" class="label">あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q7" value="そもそもそのようなものはない" id="q7-a6"><label for="q7-a6" class="label">そもそも<br>そのような<br>ものはない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q8</div>
+						<div class="q_cell tx_left">あなたの組織では、人材育成の一環として、担当業務の意義や位置づけを理解するためのアドバイスや教育が行われている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q8" value="あてはまる" id="q8-a1"><label for="q8-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q8" value="どちらかといえばあてはまる" id="q8-a2"><label for="q8-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q8" value="どちらともいえない" id="q8-a3"><label for="q8-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q8" value="どちらかといえばあてはまら<br>ない" id="q8-a4"><label for="q8-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q8" value="あてはまらない" id="q8-a5"><label for="q8-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q9</div>
+						<div class="q_cell tx_left">あなたの組織では、メンバーのキャリアアップを意識した配属・異動について本人の希望が配慮されている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q9" value="あてはまる" id="q9-a1"><label for="q9-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q9" value="どちらかといえばあてはまる" id="q9-a2"><label for="q9-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q9" value="どちらともいえない" id="q9-a3"><label for="q9-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q9" value="どちらかといえばあてはまら<br>ない" id="q9-a4"><label for="q9-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q9" value="あてはまらない" id="q9-a5"><label for="q9-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q10</div>
+						<div class="q_cell tx_left">あなたの組織では、メンバーの立場や気持ちは配慮され、意見や考え方は大切にされている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q10" value="あてはまる" id="q10-a1"><label for="q10-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q10" value="どちらかといえばあてはまる" id="q10-a2"><label for="q10-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q10" value="どちらともいえない" id="q10-a3"><label for="q10-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q10" value="どちらかといえばあてはまら<br>ない" id="q10-a4"><label for="q10-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q10" value="あてはまらない" id="q10-a5"><label for="q10-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q11</div>
+						<div class="q_cell tx_left">あなたの組織では、組織内での決断や意思決定はメンバーの信頼を得ている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q11" value="あてはまる" id="q11-a1"><label for="q11-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q11" value="どちらかといえばあてはまる" id="q11-a2"><label for="q11-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q11" value="どちらともいえない" id="q11-a3"><label for="q11-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q11" value="どちらかといえばあてはまら<br>ない" id="q11-a4"><label for="q11-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q11" value="あてはまらない" id="q11-a5"><label for="q11-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q12</div>
+						<div class="q_cell tx_left">あなたの組織では、営業目標達成に向けて、一体感を持って取り組んでいる。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q12" value="あてはまる" id="q12-a1"><label for="q12-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q12" value="どちらかといえばあてはまる" id="q12-a2"><label for="q12-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q12" value="どちらともいえない" id="q12-a3"><label for="q12-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q12" value="どちらかといえばあてはまら<br>ない" id="q12-a4"><label for="q12-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q12" value="あてはまらない" id="q12-a5"><label for="q12-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q13</div>
+						<div class="q_cell tx_left">あなたの組織では、決定したことを実行するように徹底されている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q13" value="あてはまる" id="q13-a1"><label for="q13-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q13" value="どちらかといえばあてはまる" id="q13-a2"><label for="q13-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q13" value="どちらともいえない" id="q13-a3"><label for="q13-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q13" value="どちらかといえばあてはまら<br>ない" id="q13-a4"><label for="q13-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q13" value="あてはまらない" id="q13-a5"><label for="q13-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+					<li class="q_ul_li">
+						<div class="q_cell">Q14</div>
+						<div class="q_cell tx_left">あなたの組織では、営業担当が個々の強み・弱みを理解しあい、お互いに補いあっている。</div>
+						<ul class="q_cell_btn">
+							<li><input type="radio" name="q14" value="あてはまる" id="q14-a1"><label for="q14-a1" class="label">あてはまる</label></li>
+							<li><input type="radio" name="q14" value="どちらかといえばあてはまる" id="q14-a2"><label for="q14-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
+							<li><input type="radio" name="q14" value="どちらともいえない" id="q14-a3"><label for="q14-a3" class="label">どちらとも<br>いえない</label></li>
+							<li><input type="radio" name="q14" value="どちらかといえばあてはまら<br>ない" id="q14-a4"><label for="q14-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
+							<li><input type="radio" name="q14" value="あてはまらない" id="q14-a5"><label for="q14-a5" class="label">あてはまら<br>ない</label></li>
+						</ul>
+					</li>
+				</ul>
+
+				<p>
+				<input class="next_btn" type="submit" action="#" value="次の質問へ進む">
+				</p>
+			</form>
+
+		</div>
+	</body>
+
+</hmtl>
