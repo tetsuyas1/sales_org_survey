@@ -33,7 +33,10 @@ $(document).ready(async () => {
     return false;
   }
 
-  const questionJson = ret.data;
+  const title = `${ret.data.title}`;
+  $('.q_title:first').text(`[質問${questionNum}]`);
+  $('.q_title:eq(1)').html(title);
+  const questionJson = ret.data.question;
   const entry = Object.entries(questionJson);
 
   const $qUl = $('.q_ul');
