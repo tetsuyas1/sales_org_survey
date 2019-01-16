@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.12.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
