@@ -49,14 +49,13 @@ $(document).ready(async () => {
     const insertHtml = `
 <li class="q_ul_li">
     <div class="q_cell">Q${Number(index) + 1}</div>
-    <div class="q_cell tx_left" data-class="${val.class}">${val.text}</div>
-    <ul class="q_cell_btn">
+    <div class="q_cell tx_left">${val.text}</div>
+    <ul class="q_cell_btn" data-class="${val.class}">
         <li><input type="radio" name="${radioElName}" value="5" id="${radioElName}-a1"><label for="${radioElName}-a1" class="label">あてはまる</label></li>
         <li><input type="radio" name="${radioElName}" value="4" id="${radioElName}-a2"><label for="${radioElName}-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
         <li><input type="radio" name="${radioElName}" value="3" id="${radioElName}-a3"><label for="${radioElName}-a3" class="label">どちらとも<br>いえない</label></li>
         <li><input type="radio" name="${radioElName}" value="2" id="${radioElName}-a4"><label for="${radioElName}-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
         <li><input type="radio" name="${radioElName}" value="1" id="${radioElName}-a5"><label for="${radioElName}-a5" class="label">あてはまら<br>ない</label></li>
-        
     </ul>
 </li>`;
     $qUl.append(insertHtml);
@@ -64,15 +63,22 @@ $(document).ready(async () => {
 
   //サブミット処理
   $('form').on('submit', function(evt) {
-    let score = 0;
+    // 同一のclassId(分類)は同じページにしか存在しないことを想定
+    let score = {};
+    console.log(score);
     evt.preventDefault();
     for (const val of $qUl.find('.q_ul_li ul')) {
       const $li = $(val).find('li');
+      const classId = $(val).data('class');
       const len = $li.length;
       let isSelected = false;
       for(let i = 0; i < len; i++) {
         if ($($li[i]).find('input').prop('checked')) {
-          score += Number($($li[i]).find('input').val());
+          if (!(classId in score)) {
+            score[classId] = {score: 0, questionNum: 0}
+          }
+          score[classId].score += Number($($li[i]).find('input').val());
+          score[classId].questionNum += 1;
           isSelected = true;
           break;
         }
@@ -82,7 +88,7 @@ $(document).ready(async () => {
         return false;
       }
     }
-    sessionStorage.setItem(`question${questionNum}`, score.toString());
+    sessionStorage.setItem(`questionAnswer${questionNum}`, JSON.stringify(score));
     let nextUrl = '';
     if (questionNum < maxQuestionNum) {
       nextUrl = `./q.html?p=${Number(questionNum) + 1}`;
