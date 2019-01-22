@@ -40,7 +40,7 @@ $(document).ready(async () => {
   const entry = Object.entries(questionJson);
 
   const $qUl = $('.q_ul');
-  for( const index in entry) {
+  for(const index in entry) {
     const [key, val] = entry[index];
     if (!questionJson.hasOwnProperty(key)) continue;
 
@@ -49,13 +49,14 @@ $(document).ready(async () => {
     const insertHtml = `
 <li class="q_ul_li">
     <div class="q_cell">Q${Number(index) + 1}</div>
-    <div class="q_cell tx_left">${val}</div>
+    <div class="q_cell tx_left" data-class="${val.class}">${val.text}</div>
     <ul class="q_cell_btn">
         <li><input type="radio" name="${radioElName}" value="5" id="${radioElName}-a1"><label for="${radioElName}-a1" class="label">あてはまる</label></li>
         <li><input type="radio" name="${radioElName}" value="4" id="${radioElName}-a2"><label for="${radioElName}-a2" class="label">どちらかと<br>いえば<br>あてはまる</label></li>
         <li><input type="radio" name="${radioElName}" value="3" id="${radioElName}-a3"><label for="${radioElName}-a3" class="label">どちらとも<br>いえない</label></li>
         <li><input type="radio" name="${radioElName}" value="2" id="${radioElName}-a4"><label for="${radioElName}-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
         <li><input type="radio" name="${radioElName}" value="1" id="${radioElName}-a5"><label for="${radioElName}-a5" class="label">あてはまら<br>ない</label></li>
+        
     </ul>
 </li>`;
     $qUl.append(insertHtml);
@@ -86,7 +87,7 @@ $(document).ready(async () => {
     if (questionNum < maxQuestionNum) {
       nextUrl = `./q.html?p=${Number(questionNum) + 1}`;
     } else {
-      nextUrl = './result.html';
+      nextUrl = './surveyresults.html';
     }
     location.href = nextUrl;
   });
