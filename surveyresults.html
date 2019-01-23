@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>Logarithmic Line Chart</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/sp.css" media="screen and (max-width: 1000px)">
+	<script src="js/dist/Chart.js"></script>
+	<script src="js/dist/Chart.bundle.js"></script>
+	<script src="js/utils.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="score">
+			<table>
+				<tbody id="q_title">
+				<tr>
+					<th class="star">&#9733;</th>
+					<td>マネージャーの平均スコア</td>
+					<td>?</td>
+				</tr>
+				<tr>
+					<th p class="circle">&#x25CF;</th>
+					<td>メンバーの平均スコア</td>
+					<td class="maru_half">?</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="wrap">
+			<div class="bg">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<div class="manager">
+
+				<h2 class="kakoi"><span class="user-postion"></span><br>平均との<br>GAP</h2>
+				<ul id="gap">
+				</ul>
+			</div>
+			<canvas id="ex_chart"></canvas>
+		</div>
+	</div>
+	<script src="dist/result.js"></script>
+</body>
+</html>
