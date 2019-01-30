@@ -45,7 +45,6 @@ $(document).ready(async () => {
     if (!questionJson.hasOwnProperty(key)) continue;
 
     const radioElName = `q${Number(index) + 1}`;
-    // TODO: 6番目の選択肢を追加
     const sixChoices = val.hasNoAnswer === "true" ? `<li><input type="radio" name="${radioElName}" value="1" id="${radioElName}-a5"><label for="${radioElName}-a6" class="label">そもそも<br>そのような<br>ものはない</label></li>` : '';
     const insertHtml = `
 <li class="q_ul_li">
