@@ -33,6 +33,15 @@ $(document).ready(async () => {
     return false;
   }
 
+  // percent表示の更新
+  let percent = ret.data.percent;
+  $('#meter .meter_percent').text(`${percent}%`);
+  if (percent !== '0') {
+    percent = `${percent}%`;
+  }
+  $('#meter .meter').width(percent);
+  console.log(percent);
+  // titleの更新
   const title = `${ret.data.title}`;
   $('.q_title:first').text(`[質問${questionNum}]`);
   $('.q_title:eq(1)').html(title);
