@@ -45,7 +45,7 @@ $(document).ready(async () => {
     if (!questionJson.hasOwnProperty(key)) continue;
 
     const radioElName = `q${Number(index) + 1}`;
-    // TODO: 6番目の選択肢を追加
+    const sixChoices = val.hasNoAnswer === "true" ? `<li><input type="radio" name="${radioElName}" value="1" id="${radioElName}-a5"><label for="${radioElName}-a6" class="label">そもそも<br>そのような<br>ものはない</label></li>` : '';
     const insertHtml = `
 <li class="q_ul_li">
     <div class="q_cell">Q${Number(index) + 1}</div>
@@ -56,6 +56,7 @@ $(document).ready(async () => {
         <li><input type="radio" name="${radioElName}" value="3" id="${radioElName}-a3"><label for="${radioElName}-a3" class="label">どちらとも<br>いえない</label></li>
         <li><input type="radio" name="${radioElName}" value="2" id="${radioElName}-a4"><label for="${radioElName}-a4" class="label">どちらかと<br>いえば<br>あてはまら<br>ない</label></li>
         <li><input type="radio" name="${radioElName}" value="1" id="${radioElName}-a5"><label for="${radioElName}-a5" class="label">あてはまら<br>ない</label></li>
+        ${sixChoices}
     </ul>
 </li>`;
     $qUl.append(insertHtml);
