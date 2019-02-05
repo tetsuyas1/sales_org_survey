@@ -66,20 +66,22 @@ $(document).ready(() => {
         type: 'line',
         fill: false,
         pointStyle: 'triangle',
-        backgroundColor: 'rgba(255, 140, 0, 0.7)',
+        backgroundColor: 'rgba(255, 140, 0, 1)',
         borderWidth: 0,
-        borderColor: 'rgba(0, 0, 0, 0)',
-        pointRadius: 8
+        borderColor: 'rgba(255, 140, 0, 0.7)',
+        pointRadius: 8,
+        lineTension: 0
       },
       {
         label: 'メンバーの平均スコア',
         data: createHoraizontalLineDataSets(labels, memberMeanScore),
         type: 'line',
         fill: false,
-        backgroundColor: 'rgba(128, 0, 0, 0.7)',
+        backgroundColor: 'rgba(128, 0, 0, 1)',
         borderWidth: 0,
-        borderColor: 'rgba(0, 0, 0, 0)',
-        pointRadius: 8
+        borderColor: 'rgba(128, 0, 0, 0.7)',
+        pointRadius: 8,
+        lineTension: 0
       },
       {
         label: 'あなたのスコア',
@@ -90,6 +92,7 @@ $(document).ready(() => {
   };
 
   const options = {
+    responsive: true,
     scales: {
       yAxes: [{
         ticks: {
