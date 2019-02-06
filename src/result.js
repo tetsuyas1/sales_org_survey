@@ -61,6 +61,11 @@ $(document).ready(() => {
     labels,
     datasets: [
       {
+        label: 'あなたのスコア',
+        data: userScore,
+        backgroundColor: 'rgba(211, 233, 197, 0.7)'
+      },
+      {
         label: 'マネージャーの平均スコア',
         data: createHoraizontalLineDataSets(labels, managerMeanScore),
         type: 'line',
@@ -82,11 +87,6 @@ $(document).ready(() => {
         borderColor: 'rgba(128, 0, 0, 0.7)',
         pointRadius: 8,
         lineTension: 0
-      },
-      {
-        label: 'あなたのスコア',
-        data: userScore,
-        backgroundColor: 'rgba(211, 233, 197, 1)'
       }
     ]
   };
