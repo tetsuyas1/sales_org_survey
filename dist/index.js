@@ -170,7 +170,7 @@ eval("var toString = {}.toString;\n\nmodule.exports = function (it) {\n  return 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var core = module.exports = {\n  version: '2.6.3'\n};\nif (typeof __e == 'number') __e = core; // eslint-disable-line no-undef\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/_core.js?");
+eval("var core = module.exports = {\n  version: '2.6.2'\n};\nif (typeof __e == 'number') __e = core; // eslint-disable-line no-undef\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/_core.js?");
 
 /***/ }),
 
