@@ -306,6 +306,7 @@ survey
   text-align: center;
   font-size: 14px;
 }
+/*
 .manager ul li:nth-of-type(2) {
   background: #99cdff;
 }
@@ -313,6 +314,7 @@ survey
 .manager ul li:nth-of-type(7) {
   background: #fdccff;
 }
+*/
 .kakoi {
 padding: 0.5em;
 line-height: 1.3em;
