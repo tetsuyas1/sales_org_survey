@@ -40,7 +40,6 @@ $(document).ready(async () => {
     percent = `${percent}%`;
   }
   $('#meter .meter').width(percent);
-  console.log(percent);
   // titleの更新
   const title = `${ret.data.title}`;
   $('.q_title:first').text(`[質問${questionNum}]`);
@@ -75,7 +74,6 @@ $(document).ready(async () => {
   $('form').on('submit', function(evt) {
     // 同一のclassId(分類)は同じページにしか存在しないことを想定
     let score = {};
-    console.log(score);
     evt.preventDefault();
     for (const val of $qUl.find('.q_ul_li ul')) {
       const $li = $(val).find('li');
