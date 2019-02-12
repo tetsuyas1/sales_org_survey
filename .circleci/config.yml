@@ -18,6 +18,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
+      - add_ssh_keys
       - restore_cache:
           keys:
             - yarn-{{ checksum "yarn.lock" }}
