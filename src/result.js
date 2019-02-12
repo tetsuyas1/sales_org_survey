@@ -14,6 +14,16 @@ $(document).ready(() => {
     return scores;
   };
 
+  const createHoraizontalLineDataSets = (labels, scores) => {
+    const ret = [];
+    for(let i = 0; i < labels.length; i++) {
+      console.log(labels[i], scores[i]);
+      const o = {x: scores[i], y: labels[i]};
+      ret.push(o);
+    }
+    return ret;
+  };
+
   const labels = [
     "業績マネージメント",
     "プロセスマネージメント",
@@ -38,12 +48,12 @@ $(document).ready(() => {
     gap[i] = (userScore[i] - meanScore[i]).toFixed(2);
   }
 
+
   $('.user-postion').text(isManager ? 'マネージャー' : 'メンバー');
   const $gapEl = $('#gap');
   for(const d of gap) {
     $gapEl.append(`<li>${d}</li>`);
   }
-
   //グラフの描画
   const ctx = document.getElementById('ex_chart');
 
@@ -53,16 +63,40 @@ $(document).ready(() => {
       {
         label: 'あなたのスコア',
         data: userScore,
-        backgroundColor: 'rgba(211, 233, 197, 1)'
+        backgroundColor: 'rgba(211, 233, 197, 0.7)'
+      },
+      {
+        label: 'マネージャーの平均スコア',
+        data: createHoraizontalLineDataSets(labels, managerMeanScore),
+        type: 'line',
+        fill: false,
+        pointStyle: 'triangle',
+        backgroundColor: 'rgba(255, 140, 0, 1)',
+        borderWidth: 0,
+        borderColor: 'rgba(255, 140, 0, 0.7)',
+        pointRadius: 8,
+        lineTension: 0
+      },
+      {
+        label: 'メンバーの平均スコア',
+        data: createHoraizontalLineDataSets(labels, memberMeanScore),
+        type: 'line',
+        fill: false,
+        backgroundColor: 'rgba(128, 0, 0, 1)',
+        borderWidth: 0,
+        borderColor: 'rgba(128, 0, 0, 0.7)',
+        pointRadius: 8,
+        lineTension: 0
       }
     ]
   };
 
   const options = {
+    responsive: true,
     scales: {
       yAxes: [{
         ticks: {
-          min: 300
+          min: 0
         }
       }]
     }
