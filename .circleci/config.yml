@@ -28,7 +28,7 @@ jobs:
       - run: npm build
       - run: git add -A
       - run: git commit -m "[ci skip] build"
-      - run: git push $(git config --get remote.origin.url) feat/add_circleci_conf:feat/add_circleci_conf
+      - run: git push $(git config --get remote.origin.url) master:master
 workflows:
   version: 2
   build-deploy:
@@ -39,4 +39,4 @@ workflows:
             - build
           filters:
             branches:
-              only: feat/add_circleci_conf
+              only: master
