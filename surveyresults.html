@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/sp.css" media="screen and (max-width: 1000px)">
 	<script src="js/dist/Chart.js"></script>
+	<script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
 	<script src="js/dist/Chart.bundle.js"></script>
 	<script src="js/utils.js"></script>
 </head>
@@ -15,14 +16,14 @@
 			<table>
 				<tbody id="q_title">
 				<tr>
-					<th class="star">&#9733;</th>
+					<th class="triangle">&#9650;</th>
 					<td>マネージャーの平均スコア</td>
-					<td>?</td>
+					<td class="tooltip" data-tippy="<strong>マネジャーの平均スコアとは<strong><br>過去実施の8社・約80部署のマネジャーの平均スコアです。" data-tippy-placement="right-start"><img src="assets/hatena.svg" width="16" height="16"></td>
 				</tr>
 				<tr>
 					<th p class="circle">&#x25CF;</th>
 					<td>メンバーの平均スコア</td>
-					<td class="maru_half">?</td>
+					<td class="maru_half tooltip" data-tippy="<strong>メンバーの平均スコアとは<strong><br>過去実施の8社・約80部署のメンバーの平均スコアです。" data-tippy-placement="right-start"><img src="assets/hatena.svg" width="16" height="16"></td>
 				</tr>
 				</tbody>
 			</table>

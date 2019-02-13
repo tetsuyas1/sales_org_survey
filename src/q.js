@@ -40,7 +40,6 @@ $(document).ready(async () => {
     percent = `${percent}%`;
   }
   $('#meter .meter').width(percent);
-  console.log(percent);
   // titleの更新
   const title = `${ret.data.title}`;
   $('.q_title:first').text(`[質問${questionNum}]`);
@@ -54,7 +53,7 @@ $(document).ready(async () => {
     if (!questionJson.hasOwnProperty(key)) continue;
 
     const radioElName = `q${Number(index) + 1}`;
-    const sixChoices = val.hasNoAnswer === "true" ? `<li><input type="radio" name="${radioElName}" value="1" id="${radioElName}-a5"><label for="${radioElName}-a6" class="label">そもそも<br>そのような<br>ものはない</label></li>` : '';
+    const sixChoices = val.hasNoAnswer === "true" ? `<li><input type="radio" name="${radioElName}" value="0" id="${radioElName}-a6"><label for="${radioElName}-a6" class="label">そもそも<br>そのような<br>ものはない</label></li>` : '';
     const insertHtml = `
 <li class="q_ul_li">
     <div class="q_cell">Q${Number(index) + 1}</div>
@@ -75,7 +74,6 @@ $(document).ready(async () => {
   $('form').on('submit', function(evt) {
     // 同一のclassId(分類)は同じページにしか存在しないことを想定
     let score = {};
-    console.log(score);
     evt.preventDefault();
     for (const val of $qUl.find('.q_ul_li ul')) {
       const $li = $(val).find('li');
