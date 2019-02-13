@@ -1,0 +1,42 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: yarn-{{ checksum "yarn.lock" }}
+  deploy:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - add_ssh_keys
+      - restore_cache:
+          keys:
+            - yarn-{{ checksum "yarn.lock" }}
+      - run: npm i
+      - run: git config user.name $GITHUB_NAME
+      - run: git config user.email $GITHUB_EMAIL
+      - run: npm build
+      - run: git add -A
+      - run: git commit -m "[ci skip] build"
+      - run: git push $(git config --get remote.origin.url) master:master
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
