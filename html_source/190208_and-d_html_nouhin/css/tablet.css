@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.tb {
+  display: block;
+}
+
+.pc {
+  display: none;
+}

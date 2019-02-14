@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+	<title>Logarithmic Line Chart</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/sp.css" media="screen and (max-width: 1000px)">
+	<script src="js/dist/Chart.js"></script>
+	<script src="js/dist/Chart.bundle.js"></script>
+	<script src="js/utils.js"></script>
+</head>
+<body>
+	<div class="score">
+
+		<header>
+			<div class="inner">
+				<p>TRIANGLE Scope デモ版</p>
+			</div>
+		</header>
+
+		<div id="wrapper">
+			<table>
+				<tbody id="q_title">
+					<tr>
+						<th class="star">&#9733;</th>
+						<td>マネジャーの平均スコア</td>
+						<td>?</td>
+					</tr>
+					<tr>
+						<th p class="circle">&#x25CF;</th>
+						<td>メンバーの平均スコア</td>
+						<td class="maru_half">?</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="wrap">
+			<div class="bg">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<div class="manager">
+
+				<h2 class="kakoi">マネジャー<br>平均との<br>GAP</h2>
+				<ul>
+					<li>
+						-0.2
+					</li>
+					<li>
+						1.2
+					</li>
+					<li>
+						-0.3
+					</li>
+					<li>
+						-0.3
+					</li>
+					<li>
+						-0.9
+					</li>
+					<li>
+						-0.4
+					</li>
+					<li>
+						-0.6
+					</li>
+					<li>
+						0.5
+					</li>
+					<li>
+						0.2
+					</li>
+				</ul>
+			</div>
+			<canvas id="ex_chart"></canvas>
+		</div>
+	</div>
+	<script>
+	var ctx = document.getElementById('ex_chart');
+
+	var data = {
+		labels: ["業績マネージメント", "プロセスマネージメント", "クライアントマネージメント", "メンバーマネージメント", "組織の場・風土・コミュニケーション", "営業効率化支援ツール", "顧客フォロー・販売支援ツール", "業務フロー支援ツール", "営業サポート体制"],
+		datasets: [
+			{
+				label: 'あなたのスコア',
+				data: [3.7,5,3.6,3.4,2.6,3.6,3.2,3.2,3.8, 0],
+				backgroundColor: 'rgba(211, 233, 197, 1)'
+			}
+		]
+	};
+
+	var options = {
+		scales: {
+			yAxes: [{
+				ticks: {
+					min: 300
+				}
+			}]
+		}
+	};
+
+	var ex_chart = new Chart(ctx, {
+		type: 'horizontalBar',
+		data: data,
+		options: options
+	});
+	</script>
+</body>
+</html>
