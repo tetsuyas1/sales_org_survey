@@ -332,3 +332,22 @@ color: #800000;
   width: 1000px;
   margin: 0 auto;
 }
+
+.inner{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*=======================================
+header
+=========================================*/
+
+header{
+	padding: 40px 0;
+	font-size: 40px;
+	color: #ffffff;
+	background-image: -webkit-linear-gradient(left, #A5D9C6, #BAE68F);
+	background-image: -o-linear-gradient(left, #A5D9C6, #BAE68F);
+	background-image: linear-gradient(to right, #A5D9C6, #BAE68F);
+}
