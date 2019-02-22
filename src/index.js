@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 $(document).ready(() => {
   $('form').on('submit', function(evt) {
+    const debug = "debug";
     evt.preventDefault();
     const isSelectedManager = $(this).find('input[name=select]:first').prop('checked');
     const isSelectedMember = $(this).find('input[name=select]:eq(1)').prop('checked');
