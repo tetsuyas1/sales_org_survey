@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 $(document).ready(() => {
-  const debug = "debug";
   const calcScore = () => {
     const scores = Array(11).fill(0);
     scores[10] = 5;

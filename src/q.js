@@ -2,8 +2,6 @@ import $ from 'jquery';
 import axios from 'axios';
 
 const getParams = () => {
-  
-  const debug = "debug";
   const params = {};
   const param = location.search.substring(1).split('&');
   for(let i = 0; i < param.length; i++) {
