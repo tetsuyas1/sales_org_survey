@@ -22,13 +22,17 @@ jobs:
       - restore_cache:
           keys:
             - npm-{{ checksum "package-lock.json" }}
-      - run: npm i
+      - run: git config --global merge.ours.driver true
       - run: git config user.name $GITHUB_NAME
       - run: git config user.email $GITHUB_EMAIL
+      - run: git fetch origin
+      - run: git checkout gh-pages
+      - run: git merge master -m "AUTO MERGE ${CIRCLE_BUILD_URL}"
+      - run: npm i
       - run: npm run build
       - run: git add -A
       - run: git commit -m "[ci skip] build"
-      - run: git push $(git config --get remote.origin.url) master:master
+      - run: git push $(git config --get remote.origin.url) gh-pages:gh-pages
 workflows:
   version: 2
   build-deploy:
