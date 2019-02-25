@@ -409,4 +409,10 @@ footer.question {
 	color: #ffffff;
 }
 
-
+/*=======================================
+tooltip
+=========================================*/
+.tippy-tooltip a {
+	color: #ffffff;
+	text-decoration: underline;
+}
