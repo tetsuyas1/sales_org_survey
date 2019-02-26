@@ -100,3 +100,46 @@ face
 	width: 100%;
 	margin: 0 auto;
 }
+
+.result {
+  position: relative;
+  width: 100px;
+  float: left;
+}
+
+.result h2 {
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2em;
+  font-weight: normal;
+}
+.result ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+}
+.result ul li {
+  width: 100px;
+  height: 41.1px;
+  line-height: 41.1px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+}
+
+.table-head {
+  position: relative;
+  width: 250px;
+  float: left;
+}
+
+.table-head ul li {
+  width: 250px;
+  height: 41.1px;
+  line-height: 41.1px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+}

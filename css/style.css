@@ -279,10 +279,11 @@ survey
 .bg div:nth-of-type(5) {
   background: #ecf0f9;
 }
+
 .manager {
   position: absolute;
   right: 50px;
-  top: -32px;
+  top: -50px;
   width: 100px;
 }
 .manager h2 {
@@ -346,6 +347,7 @@ line-height: 1.3em;
 color: #000; /*文字色*/
 border: 1px solid #000; /*線の太さ・色*/
 border-radius: 8px; /*角の丸み*/
+height:80px;
 }
 .triangle {
 color: #ff8c00;
