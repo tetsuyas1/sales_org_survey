@@ -3,6 +3,7 @@
 <head>
 	<title>Logarithmic Line Chart</title>
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/sp.css" media="screen and (max-width: 1000px)">
@@ -24,12 +25,12 @@
 				<tr>
 					<th class="triangle">&#9650;</th>
 					<td>マネージャーの平均スコア</td>
-					<td class="tooltip" data-tippy="<strong>マネジャーの平均スコアとは<strong><br>過去実施の8社・約80部署のマネジャーの平均スコアです。" data-tippy-placement="right-start"><img src="assets/hatena.svg" width="16" height="16"></td>
+					<td data-tippy="<strong>マネジャーの平均スコアとは<strong><br>過去実施の8社・約80部署のマネジャーの平均スコアです。" data-tippy-placement="right-start"><img src="assets/hatena.svg" width="16" height="16"></td>
 				</tr>
 				<tr>
 					<th p class="circle">&#x25CF;</th>
 					<td>メンバーの平均スコア</td>
-					<td class="maru_half tooltip" data-tippy="<strong>メンバーの平均スコアとは<strong><br>過去実施の8社・約80部署のメンバーの平均スコアです。" data-tippy-placement="right-start"><img src="assets/hatena.svg" width="16" height="16"></td>
+					<td class="maru_half" data-tippy="<strong>メンバーの平均スコアとは<strong><br>過去実施の8社・約80部署のメンバーの平均スコアです。" data-tippy-placement="right-start"><img src="assets/hatena.svg" width="16" height="16"></td>
 				</tr>
 				</tbody>
 			</table>
@@ -50,11 +51,92 @@
 			</div>
 			<div class="info">
 				<ul>
-					<li class="tooltip" data-tippy="<h3>ご提案可能な解決策例</h3><ul><li>営業戦略・組織方針徹底ワークショップの開催</li><li>営業勝ちパターン、営業活動モデル作成</li><h3>参考サプリ記事（一部）</h3><ul><li><a href='https://www.eigyousapuri.jp/teammaking/20180410_675'>「脱俗人化！営業ノウハウの共有方法とは？「勝ちパターン」見える化する」</a></li><li><a href='https://www.eigyousapuri.jp/teammaking/20180828_1278'>「営業プロセスを具体化しているか？営業マネジメントについて」</a></li><li><a href='https://www.eigyousapuri.jp/teammaking/20181009_1424'>「営業チームで顧客ポートフォリオを共有しているか」</a></li></ul>" data-tippy-placement="right-start" data-tippy-interactive="true"><i class="fas fa-exclamation-circle"></i></li>
-					<li class="tooltip" data-tippy="<h3>ご提案可能な解決策例</h3><ul><li>マネジャー向け個別アドバイスサービス</li><li>ナレッジマネジメント活動、ツール作成支援</li><h3>参考サプリ記事（一部）</h3><ul><li><a href='https://www.eigyousapuri.jp/teammaking/20190115_1840'>「営業リーダーは営業マネジャーとどう違うのか」</a></li><li><a href='https://www.eigyousapuri.jp/teammaking/20181211_1765'>「営業チームで行う、事例勉強会のコツは」
-</a></li><li><a href='https://www.eigyousapuri.jp/teammaking/20181023_1475'>「ロールプレイングの正しいやり方を知っているか」</a></li></ul>" data-tippy-placement="right-start" data-tippy-interactive="true"><i class="fas fa-exclamation-circle"></i></li>
-					<li class="tooltip" data-tippy="<h3>ご提案可能な解決策例</h3><ul><li>営業コア業務設計支援</li><li>営業支援ツール調達支援</li><h3>参考サプリ記事（一部）</h3><ul><li><a href='https://www.eigyousapuri.jp/teammaking/20180515_775'>「営業のコツは商談管理表にあり！効果的な営業会議の進め方」</a></li><li><a href='https://www.eigyousapuri.jp/teammaking/20180626_940'>「営業のナレッジマネジメント！ナレッジの共有には「シクミ」と「シカケ」が必要だ！」</a></li></ul>" data-tippy-placement="right-start" data-tippy-interactive="true"><i class="fas fa-exclamation-circle"></i></li>
+					<li><a href="#" data-toggle="modal" data-target="#my-modal-1"><i class="fas fa-exclamation-circle"></i></a></li>
+					<li><a href="#" data-toggle="modal" data-target="#my-modal-2"><i class="fas fa-exclamation-circle"></i></a></li>
+					<li><a href="#" data-toggle="modal" data-target="#my-modal-3"><i class="fas fa-exclamation-circle"></i><a></li>
 				</ul>
+			</div>
+			<div class="modal fade" id="my-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title">ご提案可能な解決策例</h3>
+							<button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<ul>
+								<li>営業戦略・組織方針徹底ワークショップの開催</li>
+								<li>営業勝ちパターン、営業活動モデル作成</li>
+							</ul>
+							<h4>参考サプリ記事（一部）</h4>
+							<ul>
+								<li><a href='https://www.eigyousapuri.jp/teammaking/20180410_675'>「脱俗人化！営業ノウハウの共有方法とは？「勝ちパターン」見える化する」</a></li>
+								<li><a href='https://www.eigyousapuri.jp/teammaking/20180828_1278'>「営業プロセスを具体化しているか？営業マネジメントについて」</a></li>
+								<li><a href='https://www.eigyousapuri.jp/teammaking/20181009_1424'>「営業チームで顧客ポートフォリオを共有しているか」</a></li>
+							</ul>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="modal fade" id="my-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title">ご提案可能な解決策例</h3>
+							<button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<ul>
+								<li>マネジャー向け個別アドバイスサービス</li>
+								<li>ナレッジマネジメント活動、ツール作成支援</li>
+							</ul>
+							<h4>参考サプリ記事（一部）</h4>
+							<ul>
+								<li><a href='https://www.eigyousapuri.jp/teammaking/20190115_1840'>「営業リーダーは営業マネジャーとどう違うのか」</a></li>
+								<li><a href='https://www.eigyousapuri.jp/teammaking/20181211_1765'>「営業チームで行う、事例勉強会のコツは」-</a></li>
+								<li><a href='https://www.eigyousapuri.jp/teammaking/20181023_1475'>「ロールプレイングの正しいやり方を知っているか」</a></li>
+							</ul>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="my-modal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title">ご提案可能な解決策例</h3>
+							<button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<ul>
+								<li>営業コア業務設計支援</li>
+								<li>営業支援ツール調達支援</li>
+							</ul>
+							<h4>参考サプリ記事（一部）</h4>
+							<ul>
+								<li><a href='https://www.eigyousapuri.jp/teammaking/20180515_775'>「営業のコツは商談管理表にあり！効果的な営業会議の進め方」</a></li>
+								<li><a href='https://www.eigyousapuri.jp/teammaking/20180626_940'>「営業のナレッジマネジメント！ナレッジの共有には「シクミ」と「シカケ」が必要だ！」</a></li>
+							</ul>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+						</div>
+					</div>
+				</div>
 			</div>
 			<canvas id="ex_chart"></canvas>
 		</div>
@@ -67,5 +149,8 @@
 		</div>
 	</footer>
 	<script src="dist/result.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

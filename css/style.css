@@ -327,6 +327,10 @@ survey
   font-size: 14px;
 }
 
+.info ul li a {
+  color: #333;
+}
+
 /*
 .manager ul li:nth-of-type(2) {
   background: #99cdff;
