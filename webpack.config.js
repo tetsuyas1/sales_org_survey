@@ -28,7 +28,7 @@ const js = {
 
 const vendorScript = {
   mode: 'development',
-  entry: ["jquery", "popper.js", "bootstrap", "tippy.js"],
+  entry: ["jquery", "popper.js", "bootstrap"],
   output: {
     filename: "vendor.js",
     path: path.join(__dirname, "dist")

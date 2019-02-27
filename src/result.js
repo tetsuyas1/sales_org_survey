@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 $(document).ready(() => {
   const calcScore = () => {
     const scores = Array(11).fill(0);
@@ -116,5 +114,6 @@ $(document).ready(() => {
     data: data,
     options: options
   });
-
+  
+  $('[data-toggle="tooltip"]').tooltip();
 });
