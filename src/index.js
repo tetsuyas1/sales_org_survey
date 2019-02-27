@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 $(document).ready(() => {
   $('form').on('submit', function(evt) {
     evt.preventDefault();

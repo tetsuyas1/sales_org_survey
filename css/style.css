@@ -16,6 +16,11 @@ body{
 	padding:0;
 	height:auto;
 }
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
 #wrapper{
 	width:100%;
 	max-width:1000px;
@@ -254,7 +259,7 @@ survey
   width: 1000px;
   margin: 0 auto;
 }
-#ex_chart {max-width:910px; position: relative; z-index:999;}
+#ex_chart {max-width:860px; position: relative; z-index:999;}
 .bg {
   overflow: hidden;
   position: absolute;
@@ -263,9 +268,9 @@ survey
 }
 .bg div {
   background: #ffebec;
-  height: 395px;
+  height: 370px;
   float: left;
-  width: 136px;
+  width: 126px;
 }
 .bg div:nth-of-type(2) {
   background: #fff3f3;
@@ -279,10 +284,11 @@ survey
 .bg div:nth-of-type(5) {
   background: #ecf0f9;
 }
+
 .manager {
   position: absolute;
-  right: 0;
-  top: -32px;
+  right: 50px;
+  top: -50px;
   width: 100px;
 }
 .manager h2 {
@@ -300,12 +306,37 @@ survey
 }
 .manager ul li {
   width: 100px;
-  height: 43.8px;
-  line-height: 43.8px;
+  height: 41.1px;
+  line-height: 41.1px;
   box-sizing: border-box;
   text-align: center;
   font-size: 14px;
 }
+
+.info {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  width: 50px;
+}
+.info ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+.info ul li {
+  width: 50px;
+  height: 123.3px;
+  line-height: 41.1px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+}
+
+.info-icon {
+  color: #333;
+}
+
 /*
 .manager ul li:nth-of-type(2) {
   background: #99cdff;
@@ -321,6 +352,7 @@ line-height: 1.3em;
 color: #000; /*文字色*/
 border: 1px solid #000; /*線の太さ・色*/
 border-radius: 8px; /*角の丸み*/
+height:80px;
 }
 .triangle {
 color: #ff8c00;
@@ -350,4 +382,26 @@ header{
 	background-image: -webkit-linear-gradient(left, #A5D9C6, #BAE68F);
 	background-image: -o-linear-gradient(left, #A5D9C6, #BAE68F);
 	background-image: linear-gradient(to right, #A5D9C6, #BAE68F);
+}
+
+/*=======================================
+footer
+=========================================*/
+footer {
+	margin-top: auto;
+	padding: 30px 0 20px;
+	width: 100%;
+	color: #ffffff;
+	background-image: -webkit-linear-gradient(left, #A5D9C6, #BAE68F);
+	background-image: -o-linear-gradient(left, #A5D9C6, #BAE68F);
+	background-image: linear-gradient(to right, #A5D9C6, #BAE68F);
+}
+
+.footer-menu {
+	text-align: center;
+	font-size: 14px;
+}
+
+.footer-menu a{
+	color: #ffffff;
 }
