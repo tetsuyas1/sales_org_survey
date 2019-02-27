@@ -19,6 +19,21 @@
 		</div>
 	</header>
 	<div id="wrapper">
+		<div class="table-responsive sp">
+		    <table class="table" id="result">
+			<thead>
+			    <tr>
+				<th>項目</th>
+				<th>あなたのスコア</th>
+				<th>マネージャーの平均スコア</th>
+				<th>メンバーの平均スコア</th>
+				<th><span class="user-postion"></span><br>平均との<br>GAP</th>
+				<th></th>
+			    </tr>
+			</thead>
+			<tbody />
+		    </table>
+		</div>
 		<div class="score pc">
 			<table>
 				<tbody id="q_title">
@@ -35,51 +50,29 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="wrap">
-			<div class="bg pc">
+		<div class="wrap pc">
+			<div class="bg">
 				<div></div>
 				<div></div>
 				<div></div>
 				<div></div>
 				<div></div>
 			</div>
-			<div class="result table-head sp">
-				<h2 class="kakoi">項目</h2>
-				<ul id="table-head">
-				</ul>
-			</div>
-			<div class="result user sp">
-				<h2 class="kakoi">あなたのスコア</h2>
-				<ul id="user-score">
-				</ul>
-			</div>
-			<div class="result manager-mean sp">
-				<h2 class="kakoi">マネージャーの平均スコア</h2>
-				<ul id="manager-mean-score">
-				</ul>
-			</div>
-			<div class="result member-mean sp">
-				<h2 class="kakoi">メンバーの平均スコア</h2>
-				<ul id="member-mean-score">
-				</ul>
-			</div>
-			<div class="result manager">
+			<div class="manager">
 				<h2 class="kakoi"><span class="user-postion"></span><br>平均との<br>GAP</h2>
 				<ul id="gap">
 				</ul>
 			</div>
 			<div class="info">
 				<ul>
-					<li><a href="#" data-toggle="modal" data-target="#my-modal-1"><i class="fas fa-exclamation-circle"></i></a></li>
-					<li><a href="#" data-toggle="modal" data-target="#my-modal-2"><i class="fas fa-exclamation-circle"></i></a></li>
-					<li><a href="#" data-toggle="modal" data-target="#my-modal-3"><i class="fas fa-exclamation-circle"></i></a></li>
+					<li><a class="info-icon" href="#" data-toggle="modal" data-target="#my-modal-1"><i class="fas fa-exclamation-circle"></i></a></li>
+					<li><a class="info-icon" href="#" data-toggle="modal" data-target="#my-modal-2"><i class="fas fa-exclamation-circle"></i></a></li>
+					<li><a class="info-icon" href="#" data-toggle="modal" data-target="#my-modal-3"><i class="fas fa-exclamation-circle"></i></a></li>
 				</ul>
 			</div>
-			<div class="chart-content pc">
+			<div class="chart-content">
 			    <canvas id="ex_chart"></canvas>
 			</div>
-		</div>
-	</div>
 			<div class="modal fade" id="my-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -162,12 +155,14 @@
 					</div>
 				</div>
 			</div>
-	<footer>
-		<div class="footer-menu">
-		<ul>
-			<li><a href="#">お問い合わせ</a></li>
-		</ul>
 		</div>
+	</div>
+	<footer>
+	    <div class="footer-menu">
+		<ul>
+		    <li><a href="#">お問い合わせ</a></li>
+		</ul>
+	    </div>
 	</footer>
 	<script src="dist/vendor.js"></script>
 	<script src="dist/result.js"></script>

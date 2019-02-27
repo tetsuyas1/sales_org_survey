@@ -47,27 +47,17 @@ $(document).ready(() => {
   for(let i = 0; i < meanScore.length; i++) {
     gap[i] = (userScore[i] - meanScore[i]).toFixed(2);
   }
-
-  const $tableHeadEl = $('#table-head');
-  for(let title of labels) {
-    $tableHeadEl.append(`<li>${title}</li>`);
-  }
-
-  const $userScoreEl = $('#user-score');
-  for(let score of userScore.slice(0,9)) {
-    $userScoreEl.append(`<li>${score}</li>`);
-  }
-
-  const $managerMeanScoreEl = $('#manager-mean-score');
-  for(const score of managerMeanScore) {
-    $managerMeanScoreEl.append(`<li>${score}</li>`);
-  }
-
-  const $memberMeanScoreEl = $('#member-mean-score');
-  for(const score of memberMeanScore) {
-    $memberMeanScoreEl.append(`<li>${score}</li>`);
-  }
   
+  //スマホ用のテーブルを描画
+  for(let i = 0; i < labels.length; i++) {
+    let info_icon = "";
+    if(i % 3 == 0) {
+      const modal = (i/3) + 1;
+      info_icon = `<td rowspan="3"><a class="info-icon" href="#" data-toggle="modal" data-target="#my-modal-${modal}"><i class="fas fa-exclamation-circle"></i></a></td>`;
+    }
+    $(".table > tbody").append(`<tr><th>${labels[i]}</th><td>${userScore[i]}</td><td>${managerMeanScore[i]}</td><td>${memberMeanScore[i]}</td><td>${gap[i]}</td>${info_icon}</tr>`);
+  }
+
   $('.user-postion').text(isManager ? 'マネージャー' : 'メンバー');
   const $gapEl = $('#gap');
   for(const d of gap) {
