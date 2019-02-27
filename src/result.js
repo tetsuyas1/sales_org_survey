@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 $(document).ready(() => {
   const calcScore = () => {
     const scores = Array(11).fill(0);
@@ -47,7 +45,16 @@ $(document).ready(() => {
   for(let i = 0; i < meanScore.length; i++) {
     gap[i] = (userScore[i] - meanScore[i]).toFixed(2);
   }
-
+  
+  //スマホ用のテーブルを描画
+  for(let i = 0; i < labels.length; i++) {
+    let info_icon = "";
+    if(i % 3 == 0) {
+      const modal = (i/3) + 1;
+      info_icon = `<td rowspan="3"><a class="info-icon" href="#" data-toggle="modal" data-target="#my-modal-${modal}"><i class="fas fa-exclamation-circle"></i></a></td>`;
+    }
+    $(".table > tbody").append(`<tr><th>${labels[i]}</th><td>${userScore[i]}</td><td>${managerMeanScore[i]}</td><td>${memberMeanScore[i]}</td><td>${gap[i]}</td>${info_icon}</tr>`);
+  }
 
   $('.user-postion').text(isManager ? 'マネージャー' : 'メンバー');
   const $gapEl = $('#gap');
@@ -107,5 +114,6 @@ $(document).ready(() => {
     data: data,
     options: options
   });
-
+  
+  $('[data-toggle="tooltip"]').tooltip();
 });
