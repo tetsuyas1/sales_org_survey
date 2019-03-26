@@ -24,6 +24,9 @@ const js = {
       }
     ]
   },
+  devServer: {
+    publicPath: '/dist/'
+  },
 };
 
 const vendorScript = {
@@ -54,7 +57,10 @@ const vendorScript = {
       "window.jQuery": "jquery",
       Popper: ["popper.js", "default"]
     })
-  ]
+  ],
+  devServer: {
+    publicPath: '/dist/'
+  },
 };
 
 module.exports = [js, vendorScript]
