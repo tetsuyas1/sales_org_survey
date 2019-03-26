@@ -49,10 +49,8 @@ $(document).ready(() => {
   //スマホ用のテーブルを描画
   for(let i = 0; i < labels.length; i++) {
     let info_icon = "";
-    if(i % 3 == 0) {
-      const modal = (i/3) + 1;
-      info_icon = `<td rowspan="3"><a class="info-icon" href="#" data-toggle="modal" data-target="#my-modal-${modal}"><i class="fas fa-exclamation-circle"></i></a></td>`;
-    }
+    const modal = Math.floor((i/3) + 1);
+    info_icon = `<td><a class="info-icon" href="#" data-toggle="modal" data-target="#my-modal-${modal}"><i class="fas fa-exclamation-circle"></i></a></td>`;
     $(".table > tbody").append(`<tr><th>${labels[i]}</th><td>${userScore[i]}</td><td>${managerMeanScore[i]}</td><td>${memberMeanScore[i]}</td><td>${gap[i]}</td>${info_icon}</tr>`);
   }
 
@@ -100,6 +98,7 @@ $(document).ready(() => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       yAxes: [{
         ticks: {
@@ -108,7 +107,6 @@ $(document).ready(() => {
       }]
     }
   };
-
   const ex_chart = new Chart(ctx, {
     type: 'horizontalBar',
     data: data,
