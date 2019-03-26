@@ -68,7 +68,11 @@ $(document).ready(async () => {
 </li>`;
     $qUl.append(insertHtml);
   }
-
+  if (questionNum == maxQuestionNum) {
+    $('.q_end:first').text("アンケートは以上で終わりです。");
+    $('input[type="submit"]:first').val("診断結果を見る");
+  }
+  
   //サブミット処理
   $('form').on('submit', function(evt) {
     // 同一のclassId(分類)は同じページにしか存在しないことを想定

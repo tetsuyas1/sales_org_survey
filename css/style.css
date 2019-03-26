@@ -92,6 +92,7 @@ body {
 	background: #ffffff;
 	width: 45%;
 }
+
 /*奇数行目の背景色を変更*/
 /* .q_ul li.q_ul_li:nth-child(even){
 	background: #eaeff7;
@@ -149,6 +150,10 @@ form{
 	border: solid 2px #dfdfdf;
 	padding: 9px 0 0 0;
 }
+.q_end {
+  margin: 5px 0;
+  font-size: 14px;
+}
 .next_btn{
 	margin:5% auto;
 }
@@ -175,6 +180,7 @@ input[type="submit"]{
 	text-align: center;
 	font-weight: bold;
 	width: 200px;
+	margin: 10px 0;
 	padding: 5px 0;
 	border: none;
 	border-radius: 5px;
