@@ -432,9 +432,21 @@ footer {
 	background: #77ad67;
 	border-radius: 100px;
 	display: block;
+	transition: all .3s;
+}
+
+.contact:hover {
+	transition: all .3s;
+	background: #ffffff;
+	opacity: 0.8;
 }
 
 .contact a {
 	display: block;
 	padding: 10px 0;
+}
+
+.contact a:hover {
+	text-decoration: none;
+	color: #4e7741;
 }
