@@ -118,6 +118,8 @@ form{
 	width: 71px;
 	height: 60px;
 	border-radius: 8px;
+	font-size: 10px;
+	line-height: 1.2;
 }
 .q_ul .q_cell_btn li:nth-of-type(1) label{
 	background: #5b9bd5;
@@ -128,7 +130,7 @@ form{
 .q_ul .q_cell_btn li:nth-of-type(2) label{
 	background: #bdd7ee;
 	border: solid 2px #bdd7ee;
-	padding: 10px 0 0 0;
+	padding: 10px 0 0;
 }
 .q_ul .q_cell_btn li:nth-of-type(3) label{
 	background: #ffffff;
@@ -138,7 +140,7 @@ form{
 .q_ul .q_cell_btn li:nth-of-type(4) label{
 	background: #fbe5d6;
 	border: solid 2px #fbe5d6;
-	padding: 5px 0 0 0;
+	padding: 5px 0 0;
 }
 .q_ul .q_cell_btn li:nth-of-type(5) label{
 	background: #f4b183;
