@@ -429,10 +429,11 @@ footer {
 	width: 90%;
 	max-width: 220px;
 	margin: 10px auto;
-	background: #77ad67;
+	background: #ffb100;
 	border-radius: 100px;
 	display: block;
 	transition: all .3s;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.2);
 }
 
 .contact:hover {
@@ -448,5 +449,5 @@ footer {
 
 .contact a:hover {
 	text-decoration: none;
-	color: #4e7741;
+	color: #ff7a00;
 }
