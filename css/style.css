@@ -357,6 +357,7 @@ survey
 
 .info-icon {
 	color: #333;
+	font-size: 20px;
 }
 
 /*
@@ -451,4 +452,8 @@ footer {
 .contact a:hover {
 	text-decoration: none;
 	color: #4e7741;
+}
+
+.table td:nth-child(-n+4) {
+	text-align: right
 }
