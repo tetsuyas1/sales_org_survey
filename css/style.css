@@ -38,12 +38,12 @@ body {
 	right: 0px;
 }
 #meter p{
-	font-size: 20px;
-	padding: 9px 5px 0px 0;
+	font-size: 16px;
+	padding: 3px 5px 0px 0;
 }
 #meter .meter_box{
-	width: 270px;
-	height: 40px;
+	width: 210px;
+	height: 30px;
 	border: solid 1px #5781c8;
 	border-radius: 10px;
 }
