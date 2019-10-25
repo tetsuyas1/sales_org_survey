@@ -394,29 +394,47 @@ background: #fdccff;
 }
 
 /*=======================================
+h見出し
+=========================================*/
+
+h1 {
+	color: #035db9;
+	margin-bottom: 30px;
+}
+/*=======================================
 header
 =========================================*/
 
-header{
-	padding: 40px 0;
-	font-size: 40px;
-	color: #ffffff;
-	background-image: -webkit-linear-gradient(left, #A5D9C6, #BAE68F);
-	background-image: -o-linear-gradient(left, #A5D9C6, #BAE68F);
-	background-image: linear-gradient(to right, #A5D9C6, #BAE68F);
+header {
+	background-color: #def0ff;
+}
+header .inner {
+	width: 1020px;
+	margin: 40px auto;
+}
+.logo {
+	width: 250px;
+}
+
+.logo img {
+	width: 100%;
+}
+
+.caution {
+	font-size: 14px;
+	margin-top: 20px;
 }
 
 /*=======================================
 footer
 =========================================*/
+
 footer {
 	margin-top: auto;
 	padding: 30px 0 20px;
 	width: 100%;
+	background-color: #def0ff;
 	color: #ffffff;
-	background-image: -webkit-linear-gradient(left, #A5D9C6, #BAE68F);
-	background-image: -o-linear-gradient(left, #A5D9C6, #BAE68F);
-	background-image: linear-gradient(to right, #A5D9C6, #BAE68F);
 }
 
 .footer-menu {
@@ -430,9 +448,9 @@ footer {
 
 .contact {
 	width: 90%;
-	max-width: 220px;
+	max-width: 420px;
 	margin: 10px auto;
-	background: #77ad67;
+	background: #035db9;
 	border-radius: 100px;
 	display: block;
 	transition: all .3s;
@@ -452,6 +470,10 @@ footer {
 .contact a:hover {
 	text-decoration: none;
 	color: #4e7741;
+}
+
+.footer-copyright {
+	color: #000000;
 }
 
 .table td:nth-child(-n+4) {
